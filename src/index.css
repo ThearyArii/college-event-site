@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-body antialiased;
+}
+
+/* ticket-stub divider used across cards */
+.stub-notch {
+  background:
+    radial-gradient(circle at 0 50%, transparent 10px, #FAF7F0 10.5px) left / 50% 100% no-repeat,
+    radial-gradient(circle at 100% 50%, transparent 10px, #FAF7F0 10.5px) right / 50% 100% no-repeat;
+}
+
+:focus-visible {
+  outline: 3px solid #F5A623;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
